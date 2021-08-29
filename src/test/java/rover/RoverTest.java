@@ -42,16 +42,18 @@ public class RoverTest {
         Rover rover = new Rover("N", 10, 10);
         rover.go("F");
 
-        assertPositionEquals(rover);
+        assertPositionEquals(rover, 10, 11);
     }
 
-    private void assertPositionEquals(Rover rover) {
-        Assert.assertEquals(10, rover.getPositionX());
-        Assert.assertEquals(11, rover.getPositionY());
-    }
+
 
     @Test
     public void moveForwardEast() {
 
+    }
+
+    private void assertPositionEquals(Rover rover, int expectedX, int expectedY) {
+        Assert.assertEquals(expectedX, rover.getPositionX());
+        Assert.assertEquals(expectedY, rover.getPositionY());
     }
 }
