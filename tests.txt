@@ -1,5 +1,5 @@
 - turn right
-@N -> E
+N -> E
 @E -> S
 @S -> W
 @W -> N

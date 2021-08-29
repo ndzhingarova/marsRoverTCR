@@ -11,4 +11,12 @@ public class RoverTest {
 
         Assert.assertEquals("E", rover.getDirection());
     }
+
+    @Test
+    public void turnRightEastToSouth() {
+        Rover rover = new Rover("E");
+        rover.go("R");
+
+        Assert.assertEquals("S", rover.getDirection());
+    }
 }
