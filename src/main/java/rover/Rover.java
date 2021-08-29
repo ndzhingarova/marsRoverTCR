@@ -6,6 +6,7 @@ import java.util.List;
 public class Rover {
 
     public static final List<String> CLOCKWISE = Arrays.asList("N", "E", "S", "W");
+    public static final List<String> COUNTER_CLOCKWISE = Arrays.asList("N", "W", "S", "E");
     private String direction;
 
     public Rover(String direction) {
@@ -19,7 +20,7 @@ public class Rover {
 
     public void go(String command) {
         if ("L".equals(command)) {
-            turn(Arrays.asList("N","W","S","E"));
+            turn(COUNTER_CLOCKWISE);
         } else {
             turn(CLOCKWISE);
         }
