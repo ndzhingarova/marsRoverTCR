@@ -18,7 +18,7 @@ public class Rover {
 
     public void go(String command) {
         if ("L".equals(command)) {
-            turn(Arrays.asList("N","W"));
+            turn(Arrays.asList("N","W","S"));
         } else {
             turn(Arrays.asList("N", "E", "S", "W"));
         }
