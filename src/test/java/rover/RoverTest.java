@@ -30,7 +30,7 @@ public class RoverTest {
             "S,E",
             "E,N"
     })
-    public void turnLeftNorthToWest(String initialDirection, String resultDirection) {
+    public void turnLeft(String initialDirection, String resultDirection) {
         Rover rover = new Rover(initialDirection);
         rover.go("L");
 
