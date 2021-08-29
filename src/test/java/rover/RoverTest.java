@@ -5,7 +5,7 @@ import org.junit.Test;
 
 public class RoverTest {
     @Test
-    public void turnRught() {
+    public void turnRight() {
         Rover rover = new Rover("N");
         rover.go("R");
 
