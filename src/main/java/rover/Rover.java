@@ -18,8 +18,11 @@ public class Rover {
     }
 
     public void go(String command) {
-        int index = compass.indexOf(this.direction);
-        this.direction = compass.get((index + 1) % 4);
-
+        if ("L".equals(command)) {
+            this.direction = "W";
+        } else {
+            int index = compass.indexOf(this.direction);
+            this.direction = compass.get((index + 1) % 4);
+        }
     }
 }
