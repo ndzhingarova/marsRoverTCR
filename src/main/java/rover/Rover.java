@@ -4,7 +4,6 @@ import java.util.Arrays;
 import java.util.List;
 
 public class Rover {
-    private static List<String> compass = Arrays.asList("N", "E", "S", "W");
 
     private String direction;
 
@@ -21,7 +20,7 @@ public class Rover {
         if ("L".equals(command)) {
             this.direction = "W";
         } else {
-            turn(compass);
+            turn(Arrays.asList("N", "E", "S", "W"));
         }
     }
 
