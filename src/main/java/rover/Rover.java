@@ -19,8 +19,7 @@ public class Rover {
 
     public void go(String command) {
         int index = compass.indexOf(this.direction);
-        String newDirection = compass.get(index + 1);
-        this.direction = newDirection;
+        this.direction = compass.get(index + 1);
 
     }
 }
