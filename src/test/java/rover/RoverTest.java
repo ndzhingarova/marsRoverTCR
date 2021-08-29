@@ -13,7 +13,8 @@ public class RoverTest {
     @Parameters({
             "N,E",
             "E,S",
-            "S,W"
+            "S,W",
+            "W,N"
     })
     public void turnRight(String initialDirection, String resultDirection) {
         Rover rover = new Rover(initialDirection);
