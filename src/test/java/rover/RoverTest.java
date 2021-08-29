@@ -24,10 +24,13 @@ public class RoverTest {
     }
 
     @Test
-    public void turnLeftNorthToWest() {
-        Rover rover = new Rover("N");
+    @Parameters({
+            "N,W"
+    })
+    public void turnLeftNorthToWest(String initialDirection, String resultDirection) {
+        Rover rover = new Rover(initialDirection);
         rover.go("L");
 
-        Assert.assertEquals("W", rover.getDirection());
+        Assert.assertEquals(resultDirection, rover.getDirection());
     }
 }
