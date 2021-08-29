@@ -27,7 +27,8 @@ public class RoverTest {
     @Parameters({
             "N,W",
             "W,S",
-            "S,E"
+            "S,E",
+            "E,N"
     })
     public void turnLeftNorthToWest(String initialDirection, String resultDirection) {
         Rover rover = new Rover(initialDirection);
