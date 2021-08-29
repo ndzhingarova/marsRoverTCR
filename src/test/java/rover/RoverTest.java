@@ -19,4 +19,12 @@ public class RoverTest {
 
         Assert.assertEquals("S", rover.getDirection());
     }
+
+    @Test
+    public void turnRightSouthToWest() {
+        Rover rover = new Rover("S");
+        rover.go("R");
+
+        Assert.assertEquals("W", rover.getDirection());
+    }
 }

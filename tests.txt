@@ -1,6 +1,6 @@
 - turn right
 N -> E
-@E -> S
+E -> S
 @S -> W
 @W -> N
 - turn left

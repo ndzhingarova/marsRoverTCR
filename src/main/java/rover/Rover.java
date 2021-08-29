@@ -15,8 +15,10 @@ public class Rover {
     public void go(String command) {
         if (this.direction.equals("N")) {
             this.direction = "E";
-        } else {
+        } else if (this.direction.equals("E")){
             this.direction = "S";
+        } else {
+            this.direction = "W";
         }
     }
 }
