@@ -9,6 +9,6 @@ public class Rover {
         return "E";
     }
 
-    public void go(String r) {
+    public void go(String command) {
     }
 }
