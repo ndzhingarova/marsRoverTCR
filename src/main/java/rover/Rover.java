@@ -21,8 +21,12 @@ public class Rover {
         if ("L".equals(command)) {
             this.direction = "W";
         } else {
-            int index = compass.indexOf(this.direction);
-            this.direction = compass.get((index + 1) % 4);
+            turn();
         }
+    }
+
+    private void turn() {
+        int index = compass.indexOf(this.direction);
+        this.direction = compass.get((index + 1) % 4);
     }
 }
