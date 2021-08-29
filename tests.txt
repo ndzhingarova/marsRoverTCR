@@ -26,7 +26,3 @@
 @10,10,N -> FRF -> 11,11,E
 - throws exception on invalid instruction
 @A -> throw InvalidInstructionException
-
-homework:
-pitest plugin
-commit or revert after each test(mvn and git)
