@@ -45,11 +45,12 @@ public class RoverTest {
         assertPositionEquals(rover, 10, 11);
     }
 
-
-
     @Test
     public void moveForwardEast() {
+        Rover rover = new Rover("E", 10, 10);
+        rover.go("F");
 
+        assertPositionEquals(rover, 11, 10);
     }
 
     private void assertPositionEquals(Rover rover, int expectedX, int expectedY) {

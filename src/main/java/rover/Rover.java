@@ -8,10 +8,14 @@ public class Rover {
     public static final List<String> CLOCKWISE = Arrays.asList("N", "E", "S", "W");
     public static final List<String> COUNTER_CLOCKWISE = Arrays.asList("N", "W", "S", "E");
     private String direction;
+    private int positionX;
+    private int positionY;
 
     public Rover(String direction, int positionX, int positionY) {
 
         this.direction = direction;
+        this.positionX = positionX;
+        this.positionY = positionY;
     }
 
     public String getDirection() {
@@ -21,8 +25,14 @@ public class Rover {
     public void go(String command) {
         if ("L".equals(command)) {
             turn(COUNTER_CLOCKWISE);
-        } else {
+        } else if ("R".equals(command)){
             turn(CLOCKWISE);
+        } else {
+            if (this.direction.equals("N")) {
+                this.positionY++;
+            } else {
+                this.positionX++;
+            }
         }
     }
 
@@ -32,10 +42,10 @@ public class Rover {
     }
 
     public int getPositionX() {
-        return 10;
+        return this.positionX;
     }
 
     public int getPositionY() {
-        return 11;
+        return this.positionY;
     }
 }
