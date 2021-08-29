@@ -8,29 +8,6 @@ import org.junit.runner.RunWith;
 
 @RunWith(JUnitParamsRunner.class)
 public class RoverTest {
-    @Test
-    public void turnRight() {
-        Rover rover = new Rover("N");
-        rover.go("R");
-
-        Assert.assertEquals("E", rover.getDirection());
-    }
-
-    @Test
-    public void turnRightEastToSouth() {
-        Rover rover = new Rover("E");
-        rover.go("R");
-
-        Assert.assertEquals("S", rover.getDirection());
-    }
-
-    @Test
-    public void turnRightSouthToWest() {
-        Rover rover = new Rover("S");
-        rover.go("R");
-
-        Assert.assertEquals("W", rover.getDirection());
-    }
 
     @Test
     @Parameters({
@@ -38,7 +15,7 @@ public class RoverTest {
             "E,S",
             "S,W"
     })
-    public void turnRightP(String initialDirection, String resultDirection) {
+    public void turnRight(String initialDirection, String resultDirection) {
         Rover rover = new Rover(initialDirection);
         rover.go("R");
 
